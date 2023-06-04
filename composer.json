@@ -1,0 +1,5 @@
+{
+    "require": {
+        "phpjuice/paypal-checkout-sdk": "^3.2"
+    }
+}
