@@ -1,6 +1,8 @@
 # Community Store Paypal Checkout
 Paypal Checkout payment method for Community Store for Concrete CMS
 
+Requires version 2.5+ of Community Store.
+
 This method supports Paypal (and card payments through Paypal) directly within the checkout page.
 
 To create credentials for this payment method, visit https://developer.paypal.com/ and log in with your Paypal account.
