@@ -10,3 +10,4 @@ Within "Apps and Credentials" create a new REST API app, and copy the Client ID 
 
 Ensure that you have set the correct matching currency.
 
+See https://developer.paypal.com/api/rest/sandbox/card-testing/ for test cards.
