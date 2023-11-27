@@ -162,19 +162,21 @@ class CommunityStorePaypalCheckoutPaymentMethod extends StorePaymentMethod
         $client = new PayPalClient($environment);
 
         $total = StoreCalculator::getGrandTotal();
-        $purchase_unit = new PurchaseUnit(AmountBreakdown::of($total, $paypalCheckoutCurrency));
+        if ($total > 0 ) {
+            $purchase_unit = new PurchaseUnit(AmountBreakdown::of($total, $paypalCheckoutCurrency));
 
-        // Create & add item to purchase unit
-        // Create a new order with intent to capture a payment
-        $order = (new Order())->addPurchaseUnit($purchase_unit);
+            // Create & add item to purchase unit
+            // Create a new order with intent to capture a payment
+            $order = (new Order())->addPurchaseUnit($purchase_unit);
 
-        // Send request to PayPal
-        $response = $client->send(new OrderCreateRequest($order));
+            // Send request to PayPal
+            $response = $client->send(new OrderCreateRequest($order));
 
-        // Get results
-        $result = json_decode($response->getBody()->getContents());
+            // Get results
+            $result = json_decode($response->getBody()->getContents());
 
-        return new JsonResponse($result);
+            return new JsonResponse($result);
+        }
     }
 
     public function captureOrder() {
