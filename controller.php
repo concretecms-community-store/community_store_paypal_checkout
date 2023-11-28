@@ -11,7 +11,7 @@ class Controller extends Package
 {
     protected $pkgHandle = 'community_store_paypal_checkout';
     protected $appVersionRequired = '8.0';
-    protected $pkgVersion = '0.9.6';
+    protected $pkgVersion = '1.0';
     protected $packageDependencies = ['community_store' => '2.5'];
     protected $pkgAutoloaderRegistries = [
         'src/CommunityStore' => '\Concrete\Package\CommunityStorePaypalCheckout\Src\CommunityStore',
