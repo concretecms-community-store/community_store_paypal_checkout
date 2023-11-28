@@ -2,6 +2,7 @@
 Paypal Checkout payment method for Community Store for Concrete CMS
 
 Requires version 2.5+ of Community Store and PHP8.1+
+(a PHP7.4 compatible version is available, see release notes)
 
 This method supports Paypal (and card payments through Paypal) directly within the checkout page.
 
