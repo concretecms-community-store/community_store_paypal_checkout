@@ -11,7 +11,7 @@ class Controller extends Package
 {
     protected $pkgHandle = 'community_store_paypal_checkout';
     protected $appVersionRequired = '8.0';
-    protected $pkgVersion = '1.0';
+    protected $pkgVersion = '1.0.1';
     protected $packageDependencies = ['community_store' => '2.5'];
     protected $pkgAutoloaderRegistries = [
         'src/CommunityStore' => '\Concrete\Package\CommunityStorePaypalCheckout\Src\CommunityStore',
@@ -19,8 +19,8 @@ class Controller extends Package
 
     public function on_start()
     {
-        Route::register('/checkout/paypaycheckoutcreateorder','\Concrete\Package\CommunityStorePaypalCheckout\Src\CommunityStore\Payment\Methods\CommunityStorePaypalCheckout\CommunityStorePaypalCheckoutPaymentMethod::createOrder');
-        Route::register('/checkout/paypaycheckoutcaptureorder','\Concrete\Package\CommunityStorePaypalCheckout\Src\CommunityStore\Payment\Methods\CommunityStorePaypalCheckout\CommunityStorePaypalCheckoutPaymentMethod::captureOrder');
+        Route::register('/checkout/paypalcheckoutcreateorder','\Concrete\Package\CommunityStorePaypalCheckout\Src\CommunityStore\Payment\Methods\CommunityStorePaypalCheckout\CommunityStorePaypalCheckoutPaymentMethod::createOrder');
+        Route::register('/checkout/paypalcheckoutcaptureorder','\Concrete\Package\CommunityStorePaypalCheckout\Src\CommunityStore\Payment\Methods\CommunityStorePaypalCheckout\CommunityStorePaypalCheckoutPaymentMethod::captureOrder');
     }
 
     public function getPackageDescription()

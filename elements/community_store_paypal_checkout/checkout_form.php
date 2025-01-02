@@ -20,7 +20,7 @@ extract($vars);
 
         // set up the transaction
         createOrder: function () {
-            return fetch("<?= \URL::to('/checkout/paypaycheckoutcreateorder'); ?>", {
+            return fetch("<?= \URL::to('/checkout/paypalcheckoutcreateorder'); ?>", {
                 method: "post",
                 headers: {
                     "Content-Type": "application/json",
@@ -32,7 +32,7 @@ extract($vars);
 
         // finalize the transaction
         onApprove: function (data) {
-            return fetch("<?= \URL::to('/checkout/paypaycheckoutcaptureorder'); ?>", {
+            return fetch("<?= \URL::to('/checkout/paypalcheckoutcaptureorder'); ?>", {
                 method: "post",
                 headers: {
                     "Content-Type": "application/json",
